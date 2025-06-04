@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-space-deep text-space-gray antialiased;
+  }
+}
+
+@layer components {
+  .cosmic-button {
+    @apply rounded-lg backdrop-blur-cosmic transition-all duration-300;
+  }
+  
+  .cosmic-button:hover {
+    @apply transform scale-105;
+  }
+  
+  .cosmic-button:active {
+    @apply transform scale-95;
+  }
+  
+  .cosmic-modal {
+    @apply bg-space-deep/80 backdrop-blur-cosmic border border-space-star/20 rounded-xl;
+  }
+}
+
+@layer utilities {
+  .bg-space-deep {
+    background-color: #030407;
+  }
+  
+  .bg-space-glass {
+    @apply bg-space-deep/80 backdrop-blur-cosmic;
+  }
+}
+
+.star-field {
+  @apply fixed inset-0 overflow-hidden pointer-events-none;
+}
+
+.star {
+  @apply absolute w-1 h-1 rounded-full bg-space-star/20;
+  animation: star-float 3s ease-in-out infinite;
+}
+
+@keyframes star-float {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(5px, 5px);
+    opacity: 0.4;
+  }
+}
+
+/* Halo orbit animations */
+@keyframes halo-spin-0 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes halo-spin-1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes halo-spin-2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes halo-spin-3 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes halo-spin-4 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
